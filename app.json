@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/memories/memories",
+    "pages/distance/distance",
+    "pages/wxml-shitu/wxml",
+    "pages/index/index",
+    "pages/event/event",
+    "pages/demo/demo"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "welcome to visit myLover!",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#ededed"
+  },
+  "tabBar": {
+    "color": "rgba(0, 0, 0, 0.6)",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#ededed",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "text": "视图1",
+        "pagePath": "pages/wxml-shitu/wxml",
+        "iconPath": "assets/icons/web.png",
+        "selectedIconPath": "assets/icons/web-active.png"
+      },
+      {
+        "text": "回忆",
+        "pagePath": "pages/memories/memories",
+        "iconPath": "assets/icons/web.png",
+        "selectedIconPath": "assets/icons/web-active.png"
+      },
+      {
+        "text": "距离",
+        "pagePath": "pages/distance/distance",
+        "iconPath": "assets/icons/io.png",
+        "selectedIconPath": "assets/icons/io-active.png"
+      },
+      {
+        "text": "活动",
+        "pagePath": "pages/event/event",
+        "iconPath": "assets/icons/event.png",
+        "selectedIconPath": "assets/icons/event-active.png"
+      }
+    ]
+  },
+  "debug": false
+}

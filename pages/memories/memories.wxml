@@ -1,0 +1,143 @@
+<view class="container vertical centered">
+    <text>🎵🎵</text>
+    <audio
+        poster="/assets/audio/poster.jpeg"
+        src="/assets/audio/janeeyre.m4a"
+        name="简爱"
+        author="zhen"
+        controls
+        bindplay="play"
+        bindpause="pause"
+        bindended="ended"
+    />
+</view>
+
+<view class="container vertical centered">
+    <text>路人匆匆，独你深入我心</text>
+    <video
+        poster="/assets/video/timeSquare.jpg"
+        src="/assets/video/timeSquare.MOV"
+        ObjectFit="cover"
+        controls
+    />
+</view>
+
+<navigator
+    open-type="navigate"
+    url="/pages/demo/demo?id=1000"
+>
+    demo
+</navigator>
+
+
+<form bindsubmit="formSubmit">
+
+    <picker
+      range="{{ countries }}"
+      bindchange="inputHandler"
+      name="picker"
+      mode="time"
+      start="09:00"
+      end='17:00'
+    >
+      <view>
+        <text>{{ pick }}</text>
+      </view>
+    </picker>
+
+    <checkbox-group name="checkbox" bindchange="inputHandler">
+        <label wx:for="{{ items }}" wx:key="key">
+            <text>{{ item.name }}</text>
+            <checkbox value="{{ item.value }}" />
+        </label>
+    </checkbox-group>
+
+    <radio-group name="radio" bindchange="inputHandler">
+        <label wx:for="{{ items }}" wx:key="key">
+            <text>{{ item.name }}</text>
+            <radio value="{{ item.value }}" />
+        </label>
+    </radio-group>
+
+    <input
+        type="text"
+        name="text"
+        placeholder="text"
+        bindinput="inputHandler"
+    />
+
+    <textarea
+        name="textarea"
+        placeholder="textarea"
+        bindinput="inputHandler"
+    />
+
+    <label for="slider">
+        <text>slider</text>
+    </label>
+    <slider id="slider" name="slider" show-value />
+
+    <button form-type="submit">提交</button>
+</form>
+
+<progress percent="65" activeColor="#6435c9" />
+
+<view class="container vertical centered">
+    <view>
+        <icon type="success"></icon>
+        <icon type="info"></icon>
+        <icon type="search"></icon>
+        <icon type="cancel" size="56"></icon>
+    </view>
+    <view>
+        <text>基础内容</text>
+        <rich-text
+            nodes="{{ nodes }}"
+        />
+    </view>
+</view>
+
+<movable-area>
+    <movable-view
+        direction="all"
+        inertia="{{ true }}"
+        out-of-bounds="{{ true }}"
+        x="30"
+        y="30"
+    />
+</movable-area>
+
+<swiper
+    indicator-dots="{{ true }}"
+    indicator-color="rgba(255,255,255,0.3)"
+    indicator-active-color="#ffffff"
+>
+    <block wx:for="{{ images }}">
+        <swiper-item>
+            <image src="{{ item }}" />
+        </swiper-item>
+    </block>
+</swiper>
+
+<scroll-view
+  scroll-y="{{ true }}"
+  style="height: 180px"
+  scroll-into-view="{{ currentView }}"
+  scroll-with-animation="{{ true }}"
+  >
+    <view class="view-container">
+        <view id="red" class="red" hover-class="lighten">
+            <text>1</text>
+        </view>
+        <view id="yellow" class="yellow" hover-class="lighten">
+            <text>2</text>
+        </view>
+        <view id="blue" class="blue" hover-class="lighten">
+            <text>3</text>
+        </view>
+    </view>
+</scroll-view>
+
+<button bindtap="setScrollView" data-view="red">red</button>
+<button bindtap="setScrollView" data-view="yellow">yellow</button>
+<button bindtap="setScrollView" data-view="blue">blue</button>

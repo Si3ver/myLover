@@ -1,0 +1,14 @@
+<!--pages/distance/distance.wxml-->
+<view class="container vertical centered">
+
+    <text>zxxx</text>
+
+    <map
+        longitude="115"
+        latitude="32"
+        scale="5"
+        markers="{{ markers }}"
+    />
+
+    <text>距离毕业还有{{ left_seperate_days }}天</text>
+</view>
