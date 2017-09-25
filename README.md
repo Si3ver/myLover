@@ -1,2 +1,2 @@
-# myLover-weixin
-to my lover
+# myLover
+a weixin-app for my lover girls
